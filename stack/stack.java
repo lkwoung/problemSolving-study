@@ -53,4 +53,9 @@ public class stack<E> {
         return gv_top == 0 ? true : false;
     }
 
+    public void checkState(){
+        System.out.println("gv_top = " + gv_top);
+        System.out.println("gv_size = " + gv_size);
+    }
+
 }
