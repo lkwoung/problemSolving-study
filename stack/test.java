@@ -23,5 +23,6 @@ public class test {
         System.out.println(lv_stack_b.peek());
         System.out.println(lv_stack_b.pop());
         System.out.println(lv_stack_b.pop());
+        System.out.println(lv_stack_b.pop());
     }
 }
