@@ -24,7 +24,7 @@ public class stack<E> {
     }
 
     public synchronized void push(E item) {
-        if (gv_top == gv_size) {
+        if (isFull()) {
             throw new FullStackException();
         }
         gv_array[gv_top++] = item;
@@ -51,6 +51,10 @@ public class stack<E> {
 
     public boolean isEmpty() {
         return gv_top == 0 ? true : false;
+    }
+
+    public boolean isFull() {
+        return gv_top >= gv_size ? true : false;
     }
 
     public void checkState(){
