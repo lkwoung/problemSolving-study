@@ -36,11 +36,10 @@ public class ringBuffer<E> extends queue<E>{
         if (isEmpty()) {
             throw new EmptyQueueException();
         }
-        int min = gv_front <= gv_rear ? gv_front : gv_rear - 1;
-        int max = gv_front > gv_rear ? gv_front : gv_rear - 1;
-        for (int i = min; i <= max; i++) {
-            if (target.equals(gv_queue[i])) {
-                return i;
+        for (int i = 0; i < gv_size; i++) {
+            int index = (gv_front + i) % gv_capacity;
+            if (target.equals(gv_queue[index])) {
+                return index;
             }
         }
         return -1;
