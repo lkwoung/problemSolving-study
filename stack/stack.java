@@ -1,7 +1,7 @@
 import java.util.EmptyStackException;
 
 public class stack<E> {
-    private int gv_top = 0;
+    private int gv_top = 0;     // 스택에서 데이터가 들어갈 자리
     private int gv_size = 0;
     private E[] gv_array;
 
@@ -20,6 +20,7 @@ public class stack<E> {
     public synchronized E pop() {
         E object = this.peek();
         gv_top--;
+        gv_array[gv_top] = null;
         return object;
     }
 
