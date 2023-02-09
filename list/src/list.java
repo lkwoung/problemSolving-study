@@ -1,3 +1,5 @@
+package src;
+
 public interface list<E> {
     public void add(E item);
 
@@ -12,4 +14,6 @@ public interface list<E> {
     public boolean isEmpty();
 
     public void print();
+
+    public E get(int index);
 }
