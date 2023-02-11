@@ -1,2 +1,4 @@
-# dataStructure-study
-자료구조 공부기록입니다.
+# problemSolving-study
+1. data structure   
+2. algorithm   
+3. problem solving   
